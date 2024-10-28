@@ -1,4 +1,12 @@
 <div id="<%= dom_id photo %>">
+  <div class="card">
+    <%=image_tag photo.image.url, class: "card-img-top"%>
+    <div class="card-body">
+      <h5 class="card-title"><%=photo.name%></h5>
+      <p class="card-text"><%=photo.content%></p>
+      <%= link_to "Show this photo", photo, class: "btn btn-primary" %>
+    </div>
+  </div>
   <p>
     <strong>Name:</strong>
     <%= photo.name %>

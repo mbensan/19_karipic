@@ -15,6 +15,7 @@ class CommentsTest < ApplicationSystemTestCase
     click_on "New comment"
 
     fill_in "Content", with: @comment.content
+    fill_in "Photo", with: @comment.photo_id
     fill_in "User", with: @comment.user_id
     click_on "Create Comment"
 
@@ -27,6 +28,7 @@ class CommentsTest < ApplicationSystemTestCase
     click_on "Edit this comment", match: :first
 
     fill_in "Content", with: @comment.content
+    fill_in "Photo", with: @comment.photo_id
     fill_in "User", with: @comment.user_id
     click_on "Update Comment"
 
